@@ -1,0 +1,136 @@
+/* Variables */
+:root {
+  --color1: #16697a;
+  --color2: #db6400;
+  --color3: #ffa62b;
+  --color4: #f8f1f1;
+}
+/* General Styles */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--color4);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2,p {
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+
+.flex-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color1);
+}
+
+.flex-title {
+  color: var(--color4);
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  padding: 1rem;
+}
+
+.flex-search {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.flex-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.label {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding-top: 1rem;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.flex-cities {
+  height: 3rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  text-align: center;
+}
+
+.flex-display-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.flex-city {
+  align-items: flex-start;
+  width: 100%;
+  padding-bottom: 1rem;
+  border: solid 0.1rem var(--color3);
+  border-radius: 0.5rem;
+}
+
+.info-tile {
+  color: var(--color2);
+}
+
+.info {
+  padding-left: 1rem;
+}
+.five-day-title {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color1);
+  text-align: center;
+}
+.footer-item {
+color: var(--color4);
+padding: 1rem;
+margin-bottom: 0;
+}
