@@ -77,11 +77,26 @@ h2,p {
   padding-bottom: 1rem;
 }
 
+.btn-search {
+  background-color: var(--color1);
+  margin-left: 0.5rem;
+  border: none;
+}
+
+.list-group-item {
+  text-transform: uppercase;
+}
+
+.list-group-item:hover{
+  background-color: var(--color2);
+  color: var(--color4);
+}
+
 .flex-cities {
   height: 3rem;
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  text-align: center;
+  border-radius: 0.5rem;
+  text-align: left;
+  padding-left: 1rem;
 }
 
 .flex-display-info {
@@ -105,6 +120,7 @@ h2,p {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  margin-top: 1rem;
 }
 
 .info-title {
@@ -115,15 +131,63 @@ h2,p {
 
 .info-icon {
   display: inline;
+  background-color: var(--color1);
+  margin-left: 1rem;
+  border-radius: 100%;
 }
 
 .info {
   padding-left: 1rem;
 }
+
+.uvi-green {
+  background-color: green;
+  color: var(--color4);
+  border-radius: 0.5rem;
+  width: 3rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.uvi-yellow {
+  background-color: yellow;
+  border-radius: 0.5rem;
+  width: 3rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.uvi-orange {
+  background-color: orange;
+  border-radius: 0.5rem;
+  width: 3rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.uvi-orange {
+  background-color: red;
+  color: var(--color4);
+  border-radius: 0.5rem;
+  width: 3rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.uvi-violet {
+  background-color: violet;
+  color: var(--color4);
+  border-radius: 0.5rem;
+  width: 3rem;
+  display: inline-block;
+  text-align: center;
+}
+
 .five-day-title {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
+  color: var(--color2);
 }
 .flex-box {
   display: flex;

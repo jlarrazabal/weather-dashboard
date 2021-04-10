@@ -22,7 +22,7 @@
         <label class="label">Search for a city:</label>
         <div class="search-input">
           <input id="city-name" type="text" name="city-search" value="" placeholder="Type the city name" class="flex-cities">
-          <button id="search-btn" type="button" name="search-button" class="btn btn-lg btn-primary flex-cities">🔍</button>
+          <button id="search-btn" type="button" name="search-button" class="btn btn-lg btn-primary flex-cities btn-search">🔍</button>
         </div>
       </form>
       <div class="city-list">
@@ -39,6 +39,7 @@
       <div id="current-city" class="flex-city">
         <div class="city-name-container">
           <h2 id="city-selected" class="info info-title">No city selected </h2>
+          <h2 id="current-date" class="info info-title">(MM/DD/YYYY)</h2>
           <img id="weather-icon" src="" alt="" class="info-icon">
         </div>
         <p class="info">Temperature: <span id="temp">No city selected</span></p>
@@ -48,7 +49,7 @@
       </div>
       <div id="five-day-forecast" class="flex-box">
         <h2 class="five-day-title">5-Day forecast</h2>
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
           <div id="day0" class="card-header">MM/DD/YYYY</div>
           <div class="card-body">
             <img id="img0" class="card-img" src="" alt="No city selected">
@@ -56,7 +57,7 @@
             <p>Humidity: <span id="humidity0">No city selected</span></p>
           </div>
         </div>
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
           <div id="day1" class="card-header">MM/DD/YYYY</div>
           <div class="card-body">
             <img id="img1" class="card-img" src="" alt="No city selected">
@@ -64,7 +65,7 @@
             <p>Humidity: <span id="humidity1">No city selected</span></p>
           </div>
         </div>
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
           <div id="day2" class="card-header">MM/DD/YYYY</div>
           <div class="card-body">
             <img id="img2" class="card-img" src="" alt="No city selected">
@@ -72,7 +73,7 @@
             <p>Humidity: <span id="humidity2">No city selected</span></p>
           </div>
         </div>
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
           <div id="day3" class="card-header">MM/DD/YYYY</div>
           <div class="card-body">
             <img id="img3" class="card-img" src="" alt="No city selected">
@@ -80,7 +81,7 @@
             <p>Humidity: <span id="humidity3">No city selected</span></p>
           </div>
         </div>
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
           <div id="day4" class="card-header">MM/DD/YYYY</div>
           <div class="card-body">
             <img id="img4" class="card-img" src="" alt="No city selected">
