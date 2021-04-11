@@ -10,6 +10,7 @@ var cityName = "";
 var cityNames = [];
 var storedCityNames;
 
+//This function validates if there are any cities saved in local storage and creates the city menu. Also, it renders the weather for Miami (default city).
 var init = function() {
   if (localStorage.getItem("searched-cities") !== null) {
     cityNames = JSON.parse(localStorage.getItem("searched-cities"));
@@ -33,9 +34,10 @@ var init = function() {
   }
 }
 
+//This function adds a new city to the city list. If the city already exists in the list, the function won't add it again.
 var addCityToList = function(city) {
   console.log(city);
-  let requestedCity = $(city.target).prev().val().toUpperCase();
+  let requestedCity = city;
   if (requestedCity === "") {
     $(function() {
       $("#no-city").dialog();
@@ -59,6 +61,7 @@ var addCityToList = function(city) {
   }
 }
 
+//This function renders the weather for a city from the list of searched cities.
 var renderKnownCity = function(city) {
   console.log(city);
   let requestedCity = $(city.target).text();
@@ -66,6 +69,7 @@ var renderKnownCity = function(city) {
   getCurrentWeather(requestedCity);
 }
 
+//This function gets the current weather data for the city searched or selected from the list by the user.
 var getCurrentWeather = function(city) {
   let currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey
   fetch(currentWeatherUrl).then(function(response) {
@@ -109,6 +113,7 @@ var getCurrentWeather = function(city) {
   });
 }
 
+//This function looks for the UV index information for the current day.
 var getUVinformation = function(lon, lat) {
   let uvURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
   fetch(uvURL).then(function(response) {
@@ -150,6 +155,7 @@ var getUVinformation = function(lon, lat) {
   });
 }
 
+//This function looks for the forecast for the next 5 days and renders the information in the cards.
 var getFiveDaysForecast = function(lon, lat) {
   let uvURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + apiKey;
   fetch(uvURL).then(function(response) {
@@ -178,19 +184,21 @@ var getFiveDaysForecast = function(lon, lat) {
   });
 }
 
-searchForm.on("click", "#search-btn", function(event) {
-  event.preventDefault();
-  addCityToList(event);
-});
-
+//Adding event listener to the search form to handle submits without clicking on the search button.
 searchForm.on("submit", function(event) {
   event.preventDefault();
+  let city = $("#city-name").val().toUpperCase();
+  addCityToList(city);
+  $("#city-name").val("");
 });
 
-// var addLiListener = function() {
-//   document.querySelectorAll(".list-group-item").addEventListener("click", function(event) {
-//     renderKnownCity(event);
-//   });
-// }
+//Adding event listener to the search form to handle submits when the search button is clicked.
+$("#search-form").delegate("#search-btn", "click", function(event){
+  event.preventDefault();
+  let city = $("#city-name").val().toUpperCase();
+  addCityToList(city);
+  $("#city-name").val("");
+});
 
+//Runs the init function on page load/reload.
 init();
